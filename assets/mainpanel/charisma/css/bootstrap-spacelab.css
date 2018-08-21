@@ -5388,14 +5388,14 @@ input[type="submit"].btn.btn-mini {
 
 .nav .nav-header {
   display: block;
-  padding: 3px 15px;
+  padding: 13px 15px;
   font-size: 11px;
   font-weight: bold;
   line-height: 18px;
   color: #000;
   /*text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);*/
   text-transform: uppercase; 
-  background: #94CD13;
+  background: #69F0AE;
 }
 
 .nav li + .nav-header {

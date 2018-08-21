@@ -14,8 +14,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 // localhost
-$config['recaptcha_sitekey'] = "6LfmIUUUAAAAAAgPR4XFHVk8wDkfdhbxCCtmehRu";
-$config['recaptcha_secretkey'] = "6LfmIUUUAAAAAAdpxpGehbuNrMszAXcjfxP-AuvG";
+$config['recaptcha_sitekey'] = "6LeG72oUAAAAABO5engG6jUG8zgsA3JzKUGYKFix";
+$config['recaptcha_secretkey'] = "6LeG72oUAAAAALXODG19XLRTyMrT61Hf-xJ0rQhL";
 
 /*
 $config['recaptcha_sitekey'] = "6LcN_h0UAAAAAK4MJjLdhTtVCoAnjbdi-5VrT-vN";

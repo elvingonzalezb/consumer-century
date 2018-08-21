@@ -23,7 +23,7 @@ function deleteArticulo(id_articulo) {
     $('#tituloModal').html('Esta a punto de borrar este artículo!');
     $('#cuerpoModal').html('<p>Esta accion no puede deshacerse. Esta seguro que quiere hacerlo?</p>');
     str = '<a href="#" class="btn" data-dismiss="modal">CANCELAR</a>';
-    str += '<a href="mainpanel/articulos/borrar/'+id_articulo+'" class="btn btn-primary">BORRAR</a>';
+    str += '<a href="mainpanel/articulos/borrar/'+id_articulo+'" class="btn btn-danger">BORRAR</a>';
     $('#botoneraModal').html(str);
     $('#botoneraModal').show();
     $('#myModal').modal('show');   
@@ -32,7 +32,7 @@ function deleteServicio(id_servicio) {
     $('#tituloModal').html('Esta a punto de borrar este servicio!');
     $('#cuerpoModal').html('<p>Esta accion no puede deshacerse. Esta seguro que quiere hacerlo?</p>');
     str = '<a href="#" class="btn" data-dismiss="modal">CANCELAR</a>';
-    str += '<a href="mainpanel/servicios/borrar/'+id_servicio+'" class="btn btn-primary">BORRAR</a>';
+    str += '<a href="mainpanel/servicios/borrar/'+id_servicio+'" class="btn btn-danger">BORRAR</a>';
     $('#botoneraModal').html(str);
     $('#botoneraModal').show();
     $('#myModal').modal('show');   
@@ -42,7 +42,7 @@ function deleteInformativa(id) {
     $('#tituloModal').html('Esta a punto de borrar esta Información general!');
     $('#cuerpoModal').html('<p>Esta seguro que quiere hacerlo?</p>');
     str = '<a href="#" class="btn" data-dismiss="modal">CANCELAR</a>';
-    str += '<a href="mainpanel/informativa/borrar/'+id+'" class="btn btn-primary">BORRAR</a>';
+    str += '<a href="mainpanel/informativa/borrar/'+id+'" class="btn btn-danger">BORRAR</a>';
     $('#botoneraModal').html(str);
     $('#botoneraModal').show();
     $('#myModal').modal('show');   
@@ -53,7 +53,7 @@ function deleteBanner(id_banner) {
     $('#tituloModal').html('Esta a punto de borrar este banner!');
     $('#cuerpoModal').html('<p>Esta seguro que quiere hacerlo?</p>');
     str = '<a href="#" class="btn" data-dismiss="modal">CANCELAR</a>';
-    str += '<a href="mainpanel/banners/delete/'+id_banner+'" class="btn btn-primary">BORRAR</a>';
+    str += '<a href="mainpanel/banners/delete/'+id_banner+'" class="btn btn-danger">BORRAR</a>';
     $('#botoneraModal').html(str);
     $('#botoneraModal').show();
     $('#myModal').modal('show');   
@@ -61,8 +61,27 @@ function deleteBanner(id_banner) {
 function deleteUsuario(id_usuario) {
     $('#tituloModal').html('Esta a punto de borrar este Usuario!');
     $('#cuerpoModal').html('<p>Esta accion no puede deshacerse. Esta seguro que quiere hacerlo?</p>');
+    str = '<a href="#" class="btn " data-dismiss="modal">CANCELAR</a>';
+    str += '<a href="mainpanel/usuarios/delete/'+id_usuario+'" class="btn btn-danger">BORRAR</a>';
+    $('#botoneraModal').html(str);
+    $('#botoneraModal').show();
+    $('#myModal').modal('show');   
+}
+
+function deleteClientes(id_cliente) {
+    $('#tituloModal').html('Esta a punto de borrar este Cliente!');
+    $('#cuerpoModal').html('<p>Esta accion no puede deshacerse. Esta seguro que quiere hacerlo?</p>');
     str = '<a href="#" class="btn" data-dismiss="modal">CANCELAR</a>';
-    str += '<a href="mainpanel/usuarios/delete/'+id_usuario+'" class="btn btn-primary">BORRAR</a>';
+    str += '<a href="mainpanel/clientes/delete/'+id_cliente+'" class="btn btn-danger">BORRAR</a>';
+    $('#botoneraModal').html(str);
+    $('#botoneraModal').show();
+    $('#myModal').modal('show');   
+}
+function deleteGaleria(id_galeria) {
+    $('#tituloModal').html('Esta a punto de borrar este Imagen de la Galeria!');
+    $('#cuerpoModal').html('<p>Esta accion no puede deshacerse. Esta seguro que quiere hacerlo?</p>');
+    str = '<a href="#" class="btn" data-dismiss="modal">CANCELAR</a>';
+    str += '<a href="mainpanel/galeria/delete/'+id_galeria+'" class="btn btn-danger">BORRAR</a>';
     $('#botoneraModal').html(str);
     $('#botoneraModal').show();
     $('#myModal').modal('show');   

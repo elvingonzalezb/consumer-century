@@ -147,22 +147,19 @@
 					<?php
 						foreach($ultimos as $ultimo)
 						{
-                        $link = $ultimo->id.'-'.$ultimo->url;
+                        $link = $ultimo->url.'-'.$ultimo->id;
                         echo '<div class="col-lg-3 col-md-6 single-fashion">';
                         echo '<img class="img-fluid" src="files/articulos/'.$ultimo->imagen.'" alt="">';
                         echo '<p class="date">'.$ultimo->created.'</p>';
-                        echo '<h4><a href="'.$link.'">'.$ultimo->titulo.'</a></h4>';
-                        echo '<p>';
-                        echo ''.$ultimo->introtext.'';
-                        echo'</p>';
-                        echo'<div class="meta-bottom d-flex justify-content-between">';
-                        echo '	<p><i class="fas fa-heart"></i> 15 Likes</p>';
-                        echo '	<p><i class="far fa-comment"></i> 02 Comments</p>';
+                        echo '<h4 class="justificar"><a href="'.$link.'">'.$ultimo->titulo.'</a></h4>';
+                        echo '<div class="meta-bottom d-flex justify-content-between">';
+                        echo '<p><i class="fas fa-heart"></i> 15 Likes</p>';
+                        echo '<p><i class="far fa-comment"></i> 02 Comments</p>';
                         echo '</div>';									
 						echo '</div>';
 						}
 					?>
-						<a href="#" class="primary-btn load-more pbtn-2 text-uppercase mx-auto mt-60">Leer mas </a>						
+						<a href="frontend/categoria" class="primary-btn load-more pbtn-2 text-uppercase mx-auto mt-60">Ver todos los artículos </a>						
 					</div>
 				</div>	
 			</section>

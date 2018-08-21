@@ -1,8 +1,8 @@
 RewriteEngine on
 
-RewriteCond %{HTTP_HOST} ^trasnportes
+RewriteCond %{HTTP_HOST} ^transportes
 
-RewriteRule (.*) http://www.trasnportes.com/$1 [R=301,L]
+RewriteRule (.*) http://www.transportes.com/$1 [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 

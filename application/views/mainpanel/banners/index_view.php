@@ -53,9 +53,9 @@
 
                         <th width="25%">Título</th>
 
-                        <th width="10%">Orden</th>
+                        <th width="5%">Orden</th>
 
-                        <th width="10%">Estado</th>
+                        <th width="5%">Estado</th>
 
                         <th width="25%">Acción</th>
 

@@ -54,7 +54,7 @@
                         $imagen = $seccion->imagen;
                         if($imagen!="")
                         {
-                            $pic = '<img src="files/servicios/'.$imagen.'"/>';
+                            $pic = '<img src="files/servicios/'.$imagen.'" width="300" />';
                         }
                         else
                         {
@@ -62,7 +62,7 @@
                         }                        
                         echo '<tr>';
                         echo '<td class="center">'.$orden.'</td>';
-                        echo '<td class="celdaImagen">'.$pic.'</td>';
+                        echo '<td class="miniatura">'.$pic.'</td>';
                         echo '<td>'.$seccion->titulo.'</td>';
                         echo '<td>'.$seccion->fulltext.'</td>';
                         echo '<td>'.$seccion->created.'</td>';
