@@ -209,5 +209,49 @@ class Banners extends CI_Controller {
             redirect('mainpanel/banners/nuevo/error/'.$error);
         }
     }
+
+     public function homeTextos()
+        {
+            $this->validacion_mainpanel->validacion_login();
+            // GENERAL
+            $theme = $this->config->item('admin_theme');
+            $data['theme'] = $theme;
+            $datos2 = array();
+            $datos2["current_section"] ="inicio";
+            $data['menu'] = $this->load->view('mainpanel/includes/menu', $datos2, true);
+            $dataPrincipal['header'] = $this->load->view('mainpanel/includes/header_view', $data, true);
+            $data['modal'] = $this->load->view('mainpanel/includes/modal_delete', $datos2, true);
+            $dataPrincipal['footer'] = $this->load->view('mainpanel/includes/footer_view', $data, true); 
+            $dataPrincipal["cuerpo"]="banners/edit_textos_view";
+   
+            $generales = $this->Banners_model->getTextos($datos2["current_section"]);
+            $dataPrincipal['generales'] = $generales;
+            $this->load->view("mainpanel/includes/template", $dataPrincipal);
+        }
+
+      public function updateTextos()
+        {
+            $this->validacion_mainpanel->validacion_login();
+            // EDITAR Clientes
+            $data = array();
+            $data["title"]         = $this->input->post("title");
+            $data["description"]   = $this->input->post("description");
+            $data["keywords"]      = $this->input->post("keywords");
+            $id_seccion            = $this->input->post('id');
+
+            $result=$this->Banners_model->updateTextosWeb($id_seccion, $data); 
+
+           if($result==true)
+            {
+                $this->session->set_userdata("success",'Se procesó correctamente la información');
+                redirect('mainpanel/banners/homeTextos');
+            }
+            else
+            {
+                $error='Ocurrió un error al procesar su información '.$error;
+                $this->session->set_userdata("error",$error);
+                redirect('mainpanel/banners/homeTextos');            
+            } 
+        }
 }
 ?>

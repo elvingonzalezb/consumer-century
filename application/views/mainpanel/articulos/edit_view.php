@@ -1,11 +1,9 @@
 <div>
-    <ul class="breadcrumb">
-        <li><a href="mainpanel/articulos/categorias">Categorias</a> <span class="divider">/</span></li>
-        <li><a href="mainpanel/articulos/nuevacategoria">Nueva Categoria</a> <span class="divider">/</span></li>
-        <li><a href="mainpanel/articulos/listado">Listado de Articulos</a> <span class="divider">/</span></li>
-        <li><a href="mainpanel/articulos/nuevo">Nuevo Articulo</a> <span class="divider">/</span></li>
-     
-    </ul>
+  <ul class="breadcrumb">
+      <li><a href="mainpanel/articulos/editTexto/articulos">Editar Texto</a> <span class="divider">/</span></li>
+      <li><a href="mainpanel/articulos/listado">Listado de Artículos</a> <span class="divider">/</span></li>
+      <li><a href="mainpanel/articulos/nuevo">Nuevo Artículo</a> <span class="divider">/</span></li>
+   </ul>
 </div>
 <div class="row-fluid sortable">
     <div class="box span12">
@@ -16,7 +14,7 @@
         <div class="box-content">
             <form class="form-horizontal" action="mainpanel/articulos/actualizar" method="post" enctype="multipart/form-data" onsubmit="return validar_articulo()">
                 <fieldset>
-                    <legend>Ingrese nueva información al artículo</legend>
+                    <legend>Ingrese la información que desea modificar</legend>
                     <?php 
                        if($this->session->userdata('success'))
                         { 
@@ -34,27 +32,7 @@
                             echo '</div>';    
                         }   
                         ?>
-                        <div class="control-group">
-                            <label class="control-label" for="typeahead">Categorías</label>
-                            <div class="controls">
-                                <select name="id_categoria">
-                                    <option value="0">Elija la categoría...</option>
-                                    <?php
-                                    foreach($categorias as $categoria) 
-                                    {  
-                                    if($categoria->id == $articulo->id_categoria)  
-                                        {              
-                                        echo '<option value="'.$categoria->id.'" selected>'.$categoria->categoria.'</option>';
-                                        }    
-                                    else 
-                                        { 
-                                        echo '<option value="'.$categoria->id.'">'.$categoria->categoria.'</option>';
-                                        }                           
-                                   } 
-                                   ?>
-                                </select>
-                            </div>
-                        </div>
+               
                         <div class="control-group">
                             <label class="control-label" for="typeahead">Título</label>
                             <div class="controls">
@@ -62,7 +40,7 @@
                                 <?php  
                                     $aux = 155 - strlen($articulo->titulo) + 1;  
                                  ?>
-                                    <label><span id="contador1"><?php echo $aux; ?></span> caracteres restantes</label>
+                                    <label><span id="contador1"><?php echo $articulo->titulo; ?></span> caracteres restantes</label>
                             </div>
                         </div>
                         <div class="control-group">
@@ -73,13 +51,13 @@
                         <div class="control-group">
                             <label class="control-label" for="typeahead">Imagen</label>
                             <div class="controls">
-                                <div class="span6"><img src="files/articulos/medianas/<?php echo $articulo->imagen; ?>" width="300" /></div>
+                                <div class="span6"><img src="files/articulos/medianas/<?php echo $articulo->imagen; ?>" width="370" height="275" /></div>
                             </div>
                         </div>
                         <div class="control-group">
                             <div class="controls">
                                 <div class="alert alert-success span10">
-                                    <p><strong>La imagen a subir debe tener dimensiones de 360 x 220 pixeles. Caso contrario la imagen se forzará al tamaño indicado.</strong></p>
+                                    <p><strong>La imagen a subir debe tener dimensiones de 370 x 275 pixeles. Caso contrario la imagen se forzará al tamaño indicado.</strong></p>
                                 </div>
                             </div>
                         </div>
@@ -100,15 +78,14 @@
                             <div class="control-group">
                                 <label class="control-label" for="typeahead">Descripción Corta</label>
                                 <div class="controls">
-                                    <textarea id="introtext" name="introtext" rows="6" class="span8" onkeyup="cuentaChars(this.value, 'contador2', 300)" maxlength="300">
-                                        <?php echo $articulo->introtext;?>
-                                    </textarea>
+                                    <textarea id="introtext" name="introtext" rows="" class="span8" onkeyup="cuentaChars(this.value, 'contador2', 300)" maxlength="300"><?php echo $articulo->introtext;?></textarea>
                                     <?php 
-                                      $aux = 300 - strlen($articulo->introtext) + 1;
+                                      $car_intro = 300 - strlen($articulo->introtext) + 1;
                                     ?>
-                                        <label><span id="contador2"><?php echo $aux; ?></span> caracteres restantes</label>
+                                        <label><span id="contador2"><?php echo $car_intro; ?></span> caracteres restantes</label>
                                 </div>
                             </div>
+                         
                             <div class="control-group">
                                 <label class="control-label" for="typeahead">Descripción</label>
                                 <div class="controls">

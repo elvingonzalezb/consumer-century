@@ -1,11 +1,9 @@
 <div>
-    <ul class="breadcrumb">
-        <li><a href="mainpanel/articulos/categorias">Categorias</a> <span class="divider">/</span></li>
-        <li><a href="mainpanel/articulos/nuevacategoria">Nueva Categoria</a> <span class="divider">/</span></li>
-        <li><a href="mainpanel/articulos/listado">Listado de Articulos</a> <span class="divider">/</span></li>
-        <li><a href="mainpanel/articulos/nuevo">Nuevo Articulo</a> <span class="divider">/</span></li>
-       
-    </ul>
+   <ul class="breadcrumb">
+      <li><a href="mainpanel/articulos/editTexto/articulos">Editar Texto</a> <span class="divider">/</span></li>
+      <li><a href="mainpanel/articulos/listado">Listado de Artículos</a> <span class="divider">/</span></li>
+      <li><a href="mainpanel/articulos/nuevo">Nuevo Artículo</a> <span class="divider">/</span></li>
+   </ul>
 </div>
 
 <div class="row-fluid sortable">
@@ -41,11 +39,10 @@
                     <tr>
                         <th width="3%">Nro</th>
                         <th>Imagen</th>
-                        <th width="20%">Título</th>
-                        <th width="25%">Descripción</th>
-                        <th width="8%">Fecha Publicación</th>
+                        <th width="40%">Título</th>
+                        <th width="16%">Fecha Publicación</th>
                         <th width="5%">Estado</th>
-                        <th width="20%">Acción</th>
+                        <th width="30%">Acción</th>
                     </tr>
                 </thead>   
                 <tbody>
@@ -64,9 +61,8 @@
                         }                        
                         echo '<tr>';
                         echo '<td class="center">'.$orden.'</td>';
-                        echo '<td class="celdaImagen">'.$pic.'</td>';
+                        echo '<td width="500" height="300">'.$pic.'</td>';
                         echo '<td>'.$seccion->titulo.'</td>';
-                        echo '<td>'.$seccion->fulltext.'</td>';
                         echo '<td>'.$seccion->created.'</td>';
                         if($seccion->state==1)
                         {

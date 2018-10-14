@@ -10,11 +10,7 @@
             return $query->result();
         }
         
-       public function getCategorias($limite) {
-            $this->db->where('estado', 'A');
-            $query =  $this->db->get("categorias_articulos", $limite, 0);
-            return $query->result();
-        }
+  
         
        public function getLastArticulos($limite) {
             $this->db->where('state', '1');

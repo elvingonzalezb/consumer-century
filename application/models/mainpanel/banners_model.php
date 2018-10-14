@@ -38,5 +38,19 @@
             return $query->row();
         }
 
+       public function getTextos($current_section)
+        {
+            $this->db->where("seccion", $current_section);
+            $query=$this->db->get("textos_web");
+            return $query->row();
+        }
+
+       public function updateTextosWeb($id_seccion, $data) 
+        {
+            $this->db->where("id", $id_seccion);
+            $result = $this->db->update("textos_web", $data);
+            return $result;
+        }
+
     }
 ?>

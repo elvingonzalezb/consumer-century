@@ -1,9 +1,9 @@
 <div>
-    <ul class="breadcrumb">
-        <li><a href="mainpanel/clientes/listado">Listado de Clientes</a> <span class="divider">/</span></li>
-        <li><a href="mainpanel/clientes/nuevo">Nuevo Cliente</a> <span class="divider">/</span></li>
-       
-    </ul>
+  <ul class="breadcrumb">
+       <li><a href="mainpanel/clientes/editTexto/clientes">Editar Texto</a> <span class="divider">/</span></li>
+      <li><a href="mainpanel/clientes/listado">Listado de Clientes</a> <span class="divider">/</span></li>
+      <li><a href="mainpanel/clientes/nuevo">Nuevo Cliente</a> <span class="divider">/</span></li>
+   </ul>
 </div>
 
 <div class="row-fluid sortable">
@@ -61,7 +61,7 @@
                         }                        
                         echo '<tr>';
                         echo '<td class="center">'.$orden.'</td>';
-                        echo '<td class="celdaImagen">'.$pic.'</td>';
+                        echo '<td width="240" height="120">'.$pic.'</td>';
                         echo '<td>'.$cliente->nombre.'</td>';
                         echo '<td>'.$cliente->orden.'</td>';
                         if($cliente->state==1)

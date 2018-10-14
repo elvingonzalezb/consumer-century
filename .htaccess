@@ -1,12 +1,13 @@
 RewriteEngine on
 
-RewriteCond %{HTTP_HOST} ^transportes
+RewriteCond %{HTTP_HOST} ^www.paginasadministrables.info/py_promomerch
 
-RewriteRule (.*) http://www.transportes.com/$1 [R=301,L]
+RewriteRule (.*) http://www.paginasadministrables.info/py_promomerch/$1 [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 
 RewriteCond %{REQUEST_FILENAME} !-d
+
 
 RewriteRule ^(.*)$ index.php/$1 [L]
 

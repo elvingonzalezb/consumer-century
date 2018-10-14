@@ -1,0 +1,55 @@
+
+/*
+ * blog.less 
+ * -----------------------------------------------
+*/
+.post {
+
+  .entry-header {
+    position: relative;
+    overflow: hidden;
+  }
+  .entry-header-new {
+    clear: both;
+      margin-bottom: 45px;
+      position: relative;
+      width: 100%;
+
+    .blog-author {
+        bottom: -30px;
+        height: 60px;
+        left: 0;
+        margin: auto;
+        padding: 1px;
+        position: absolute;
+        right: 0;
+        width: 60px;
+        z-index: 3;
+      img {
+        border-radius: 50%;
+        max-width: 100%;
+          width: 100%;
+      }
+    }
+  }
+  .entry-title {
+    margin-top: 0;
+  }
+
+  .entry-content {
+    background: @white-f8;
+    padding: 15px;
+  }
+  &.media-post  {
+
+    .post-thumb {
+      float: left;    
+      margin: 0 10px 10px 0;
+    }
+  }
+
+  .post-thumb {
+    .transition(all .2s ease-in-out); 
+  }
+
+}

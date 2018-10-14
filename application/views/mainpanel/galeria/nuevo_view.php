@@ -1,9 +1,9 @@
 <div>
-    <ul class="breadcrumb">
-    <li><a href="mainpanel/galeria/listado">Listado de Imagenes de Galeria</a> <span class="divider">/</span></li>
-    <li><a href="mainpanel/galeria/nuevo">Nuevo Imagen en galeria</a> <span class="divider">/</span></li>
-       
-    </ul>
+     <ul class="breadcrumb">
+      <li><a href="mainpanel/galeria/editTexto/galeria">Editar Texto</a> <span class="divider">/</span></li>
+      <li><a href="mainpanel/galeria/listado">Listado de Galeria</a> <span class="divider">/</span></li>
+      <li><a href="mainpanel/galeria/nuevo">Nueva Galeria</a> <span class="divider">/</span></li>
+   </ul>
 </div>
 <div class="row-fluid sortable">
     <div class="box span12">
@@ -48,7 +48,7 @@
                         <div class="control-group">
                             <div class="controls">
                                 <div class="alert alert-success span10">
-                                    <p><strong>La imagen a subir debe tener dimensiones de 1200 x 760 pixeles. Caso contrario la imagen se forzará al tamaño indicado.</strong></p>
+                                    <p><strong>La imagen a subir debe tener dimensiones de 474 x 386 pixeles. Caso contrario la imagen se forzará al tamaño indicado.</strong></p>
                                 </div>
                             </div>
                         </div>

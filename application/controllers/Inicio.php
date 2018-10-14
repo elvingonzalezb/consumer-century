@@ -24,13 +24,15 @@
 			$dataPrincipal['seccion'] = 'inicio';
 			
 			$dataPrincipal['banners'] = $this->Inicio_model->getBanners();	
-			$dataPrincipal['servicios'] = $this->Inicio_model->getServicios(8);
-			$dataPrincipal['ultimos'] = $this->Inicio_model->getLastArticulos(4);	
+			$dataPrincipal['servicios'] = $this->Inicio_model->getServicios(3);
+			$dataPrincipal['last_articulos'] = $this->Inicio_model->getLast_Art(6);	
+			$dataPrincipal['clientes'] = $this->Inicio_model->getClientes(6);
             $dataPrincipal['nosotros'] = $this->Inicio_model->getTextosGenerales('nosotros');
-            $dataPrincipal['paralax'] = $this->Inicio_model->getTextosGenerales('paralax');
-            $dataPrincipal['texto_servicio'] = $this->Inicio_model->getTextosGenerales('texto_servicio');
-            $dataPrincipal['categorias'] = $this->Inicio_model->getCategorias(2);
-            $dataPrincipal['clientes'] = $this->Inicio_model->getClientes(2);
+            $dataPrincipal['titulodespuesbanner'] = $this->Inicio_model->getTextosGenerales('titulodespuesbanner');
+            $dataPrincipal['tituloservicios'] = $this->Generales_model->getTextosWeb('servicios');
+			$dataPrincipal['Dest_servicios'] = $this->Inicio_model->getArtServicios(9);	
+          
+       
 			$data = array();
 			$data['title'] = $contenido->title;
 			$data['keywords'] = $contenido->keywords;

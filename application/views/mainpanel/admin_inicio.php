@@ -3,6 +3,9 @@
     <ul class="breadcrumb">
 
         <li><a href="mainpanel/inicio">Inicio</a> <span class="divider">/</span></li>
+        <li><a href="mainpanel/banners/homeTextos">Texto Home </a> <span class="divider">/</span></li>
+        <li><a href="mainpanel/banners/listado">Lista de Banners </a> <span class="divider">/</span></li>
+        <li><a href="mainpanel/banners/nuevo">Nuevo Banner</a></li>
 
     </ul>
 
@@ -35,7 +38,7 @@
             <?php
                 if($this->session->userdata('nivel') == 1)
                 {
-                    echo '<p>Para cambiar su información de acceso de Administrador <a href="mainpanel/datos">HAGA CLICK AQUI </a> </p>';
+                    echo '<p>Para cambiar su información de acceso de Administrador <a href="mainpanel/Datos/edit">HAGA CLICK AQUI </a> </p>';
                 }
             ?>
             

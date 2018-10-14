@@ -87,6 +87,16 @@ function deleteGaleria(id_galeria) {
     $('#myModal').modal('show');   
 }
 
+function deleteFlota(id_flota) {
+    $('#tituloModal').html('Esta a punto de borrar esta la flota!');
+    $('#cuerpoModal').html('<p>Esta accion no puede deshacerse. Esta seguro que quiere hacerlo?</p>');
+    str = '<a href="#" class="btn" data-dismiss="modal">CANCELAR</a>';
+    str += '<a href="mainpanel/flota/delete/'+id_flota+'" class="btn btn-danger">BORRAR</a>';
+    $('#botoneraModal').html(str);
+    $('#botoneraModal').show();
+    $('#myModal').modal('show');   
+}
+
 
 function mostrarBanner(imagen, titulo) {
     $('#tituloModal').html(titulo);

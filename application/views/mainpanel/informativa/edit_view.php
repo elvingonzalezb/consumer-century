@@ -1,7 +1,7 @@
 <div>
     <ul class="breadcrumb">
-        <li><a href="mainpanel/informativa/listado">Listado de Información General</a> <span class="divider">/</span></li>
-      
+       
+        <li><a href="mainpanel/informativa/listado">Listado Textos Varios</a> <span class="divider"></span></li>
      
     </ul>
 </div>
@@ -12,7 +12,7 @@
             <div class="box-icon"> <a href="javascript:history.back(-1)" class="btn btn-round" title="VOLVER"><i class="icon-arrow-left"></i></a> </div>
         </div>
         <div class="box-content">
-            <form class="form-horizontal" action="mainpanel/informativa/actualizar" method="post" enctype="multipart/form-data" onsubmit="return validar_articulo()">
+            <form class="form-horizontal" action="mainpanel/informativa/actualizar/<?php echo $generales->id;?>" method="post" enctype="multipart/form-data" onsubmit="return validar_articulo()">
                 <fieldset>
                     <legend>Ingrese nueva información general</legend>
                     <?php 
@@ -51,13 +51,13 @@
                         <div class="control-group">
                             <label class="control-label" for="typeahead">Imagen</label>
                             <div class="controls">
-                                <div class="span6"><img src="files/generales/<?php echo $generales->imagen; ?>" width="300" /></div>
+                                <div class="span6"><img src="files/informativa/<?php echo $generales->imagen; ?>" width="300" /></div>
                             </div>
                         </div>
                         <div class="control-group">
                             <div class="controls">
                                 <div class="alert alert-success span10">
-                                    <p><strong>La imagen a subir debe tener dimensiones de 360 x 220 pixeles. Caso contrario la imagen se forzará al tamaño indicado.</strong></p>
+                                    <p><strong>La imagen a subir debe tener dimensiones de 1280 x 565 pixeles. Caso contrario la imagen se forzará al tamaño indicado.</strong></p>
                                 </div>
                             </div>
                         </div>
@@ -87,24 +87,15 @@
                                 <label class="control-label">Estado</label>
                                 <div class="controls">
                                     <label class="radio">
-                                        <input type="radio" name="state" id="estado1" value="1"
-                                         <?php if($generales->state==1)
-                                          echo ' checked="checked"';
-                                         ?>> Activo
+                                        <input type="hidden" name="state" id="estado1" value="3"> 
                                     </label>
-                                    <div style="clear:both"></div>
-                                    <label class="radio">
-                                       <input type="radio" name="state" id="estado2" value="0"
-                                        <?php if($generales->state==0)
-                                         echo ' checked="checked"';
-                                        ?>> Inactivo 
-                                    </label>
+                               
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label" for="typeahead">Sección</label>
                                 <div class="controls">
-                                    <input type="text" id="seccion" name="seccion" class="span8 typeahead" value="<?php echo $generales->seccion;?>">
+                                    <input type="text" id="seccion" name="seccion" class="span8 typeahead" value="<?php echo $generales->seccion;?>" readonly >
                                 </div>
                             </div>
                                <legend> Parámetros SEO</legend>

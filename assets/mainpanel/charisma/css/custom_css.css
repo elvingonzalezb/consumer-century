@@ -6,6 +6,8 @@ li.active a {
     background: #13ADDB !important; color: #fff !important;
 }
 
+
+
 .div_color{
 
     width:100px;
@@ -167,7 +169,6 @@ li.active a {
 #tablaPreviewBoletin { width: 700px; }
 
 .miniatura img { max-width: 400px; height: auto; }
-.miniatura2 img { max-width: 200px; height: auto; }
 
 
 
@@ -311,12 +312,21 @@ span.pagoVencido {
 
 .datoProx { font-size: 11px; height: 20px; }
 
-.filaOculta {
-    display: none;
-}
-.filaMostrada {
-    display: block;
-}
 i.icono_negro {
-    background-image: url("../img/glyphicons-halflings.png") !important;
+  background-image: url("../img/glyphicons-halflings.png") !important;
+}
+.icon-user {
+  background-image: url("../img/glyphicons-halflings.png") !important;
+}
+
+.bienvenida {
+    padding:10px 30px;
+    line-height: 20px;
+    font-size: 16px;
+}
+.bienvenida h2 {
+    color: #1976D2;
+}
+.bienvenida li {
+    padding: 5px 0;
 }

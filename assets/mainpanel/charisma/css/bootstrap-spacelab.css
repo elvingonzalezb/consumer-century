@@ -268,7 +268,7 @@ body {
   margin: 0;
   /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 18px;
   color: #333333;
   background-color: #E3E8EA
@@ -2985,26 +2985,16 @@ table .span24 {
 [class^="icon-"],
 
 [class*=" icon-"] {
-
   display: inline-block;
-
   width: 14px;
-
   height: 14px;
-
   *margin-right: .5em; margin-right: 10px;
-
   line-height: 14px;
-
   vertical-align: text-top;
-
   /*background-image: url("../img/glyphicons-halflings.png");*/
   background-image: url("../img/glyphicons-halflings-white.png");
-
   background-position: 14px 14px;
-
   background-repeat: no-repeat;
-
 }
 
 [class^="icon-"]:last-child,
@@ -3016,10 +3006,10 @@ table .span24 {
 }
 
 .icon-white {
-
   background-image: url("../img/glyphicons-halflings-white.png");
-
 }
+
+
 
 .icon-glass {
 
@@ -3064,7 +3054,7 @@ table .span24 {
 }
 
 .icon-user {
-
+  background-image: url("../img/glyphicons-halflings.png");
   background-position: -168px 0;
 
 }
@@ -5387,15 +5377,23 @@ input[type="submit"].btn.btn-mini {
 }
 
 .nav .nav-header {
+
   display: block;
-  padding: 13px 15px;
+
+  padding: 3px 15px;
+
   font-size: 11px;
+
   font-weight: bold;
+
   line-height: 18px;
-  color: #000;
-  /*text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);*/
-  text-transform: uppercase; 
-  background: #69F0AE;
+
+  color: #999999;
+
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+
+  text-transform: uppercase;
+
 }
 
 .nav li + .nav-header {
@@ -5533,8 +5531,8 @@ input[type="submit"].btn.btn-mini {
 }
 
 .nav-tabs > li > a {
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   line-height: 18px;
   border: 1px solid transparent;
   -webkit-border-radius: 4px 4px 0 0;
@@ -6589,7 +6587,7 @@ input[type="submit"].btn.btn-mini {
 
 .breadcrumb {
   padding: 10px 0 0 0;
-  margin:10px 0 0 0px;
+  margin:10px 0 5px 0px;
   list-style: none;
   /*
   background-color: #fbfbfb;
@@ -6625,7 +6623,8 @@ input[type="submit"].btn.btn-mini {
 }
 
 .breadcrumb a {
-  color: #495d65; font-size: 14px; font-weight: 400;
+  color: #495d65; 
+  font-size: 14px; font-weight: 400;
 }
 .breadcrumb .active a {
   color: #333333;

@@ -1,9 +1,9 @@
 <div>
     <ul class="breadcrumb">
-        <li><a href="mainpanel/galeria/listado">Listado de Imagenes de Galeria</a> <span class="divider">/</span></li>
-        <li><a href="mainpanel/galeria/nuevo">Nuevo Imagen en galeria</a> <span class="divider">/</span></li>
-       
-    </ul>
+      <li><a href="mainpanel/galeria/editTexto/galeria">Editar Texto</a> <span class="divider">/</span></li>
+      <li><a href="mainpanel/galeria/listado">Listado de Galeria</a> <span class="divider">/</span></li>
+      <li><a href="mainpanel/galeria/nuevo">Nueva Galeria</a> <span class="divider">/</span></li>
+   </ul>
 </div>
 
 <div class="row-fluid sortable">
@@ -53,7 +53,7 @@
                         $imagen = $galeria->imagen;
                         if($imagen!="")
                         {
-                            $pic = '<img src="files/galeria/'.$imagen.'"/>';
+                            $pic = '<img src="files/galeria/'.$imagen.' "/>';
                         }
                         else
                         {

@@ -4,6 +4,12 @@
         {
                 parent::__construct();
         }
+
+        public function getArtUltFecha() {
+            $this->db->order_by("id", "desc");
+            $query = $this->db->get("articulos", 1);
+            return $query->row();          
+        }
         public function getArticulos($id) {
             $this->db->where('id', $id);
             $query =  $this->db->get('articulos');
@@ -23,6 +29,13 @@
             return $query->result();
        }
 
+       public function getArtDestacados($limite) {
+            $this->db->where('destacado', '1');
+            $this->db->order_by("created", "desc");
+            $query = $this->db->get("articulos", $limite, 0);
+            return $query->result();
+       }
+
      public function getArticulosDestacados() {
             $sql = "SELECT a.id as id, a.url as url, a.articulo as articulo, 
             a.imagen as imagen, count(*) as cuenta FROM articulos 
@@ -34,18 +47,23 @@
             $query =  $this->db->query($sql);
             return $query->result();
         }
-       public function getUltimasEmpresas($cant) {
-            $sql = "SELECT a.id, a.nombre, a.url, a.logo, b.banner FROM empresas a 
-            INNER JOIN banners b 
-            WHERE a.id=b.id_empresa 
-                AND b.banner!='' 
-                AND b.banner!='no_banner.jpg' 
-            GROUP BY a.id 
-            ORDER BY a.fecha_ingreso 
-            DESC LIMIT $cant";
-            $query = $this->db->query($sql);
-            return $query->result();
-        }
+
+      public function numTotalArticulos() {
+         $this->db->where('state', '1');
+        $this->db->order_by('created');
+        $query =  $this->db->get('articulos');
+        return $query->num_rows();
+    }
+
+    public function getArticulosxPagina($inicio, $limite) {
+        $this->db->where('state', '1');
+        $this->db->order_by('created');
+        $this->db->limit($limite, $inicio);
+        $query =  $this->db->get('articulos');
+        return $query->result();
+    }
+
+         
 
  
        }

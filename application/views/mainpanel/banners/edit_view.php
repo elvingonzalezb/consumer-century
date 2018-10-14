@@ -1,6 +1,8 @@
 <div>
     <ul class="breadcrumb">
-        <li><a href="mainpanel/banners/listado">Lista de Banners</a> <span class="divider">/</span></li>
+        <li><a href="mainpanel/inicio">Inicio</a> <span class="divider">/</span></li>
+        <li><a href="mainpanel/banners/homeTextos">Texto Home </a> <span class="divider">/</span></li>
+        <li><a href="mainpanel/banners/listado">Lista de Banners </a> <span class="divider">/</span></li>
         <li><a href="mainpanel/banners/nuevo">Nuevo Banner</a></li>
     </ul>
 </div>

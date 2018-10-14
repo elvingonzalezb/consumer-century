@@ -14,6 +14,7 @@
 
         public function getLista() 
         {
+            $this->db->where("state", '3');
             $query = $this->db->get('textos_web');
             return $query->result();
         }
@@ -32,9 +33,17 @@
             return $query->row();
         }
 
-        public function update($id, $data) 
+         public function getTextos($id_seccion)
         {
-            $this->db->where("id", $id);
+            $this->db->where("id", $id_seccion);
+            $query=$this->db->get("textos_web");
+            return $query->row();
+        }
+        
+    
+        public function update($id_seccion, $data) 
+        {
+            $this->db->where("id", $id_seccion);
             $result = $this->db->update("textos_web", $data);
             return $result;
         }

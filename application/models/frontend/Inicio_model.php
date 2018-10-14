@@ -5,23 +5,32 @@
                 parent::__construct();
         }
 
-       public function getBanners() {
-            $query =  $this->db->get('banners');
-            return $query->result();
-        }
+   public function getBanners(){
+
+    $query = $this->db->select("titulo, subtitulo, sumilla, boton, enlace,  imagen")
+
+          ->from('banners')
+
+          ->where('estado','A')
+
+          ->order_by('orden')
+
+          ->get()
+
+          ->result_array();
+
+    return $query;
+
+  }
         
-       public function getCategorias($limite) {
-            $this->db->where('estado', 'A');
-            $query =  $this->db->get("categorias_articulos", $limite, 0);
-            return $query->result();
-        }
         
-       public function getLastArticulos($limite) {
+       public function getLast_Art($limite) {
             $this->db->where('state', '1');
             $this->db->order_by("created", "desc");
             $query = $this->db->get("articulos", $limite, 0);
             return $query->result();
        }
+
 
        public function getServicios($limite) {
            $this->db->where('state', '1');
@@ -34,14 +43,20 @@
            $query = $this->db->get("clientes", $limite, 0);
            return $query->result();
         }
-        
+    
         public function getTextosGenerales($seccion) {
            $this->db->where('seccion', $seccion);
            $query = $this->db->get("textos_web");
            return $query->row();
         }
    
-        
+          public function getArtServicios($limite) {
+            $this->db->where('destacado', '1');
+            $this->db->order_by("created", "desc");
+            $query = $this->db->get("servicios", $limite, 0);
+            return $query->result();
+       }
+       
        public function getRubrosDestacados() {
             $sql = "SELECT a.id as id, a.url as url, a.rubro as rubro, a.imagen as imagen, count(*) as cuenta FROM rubros a INNER JOIN empresas b WHERE a.id=b.id_rubro AND a.estado='A' GROUP BY b.id_rubro ORDER BY cuenta DESC LIMIT 8";
             $query =  $this->db->query($sql);
@@ -60,19 +75,7 @@
             return $query->result();
         }
 
-       public function getUltimasTransportes($cant) {
-            $sql = "SELECT a.id, a.nombre, a.url, a.logo, b.banner FROM empresas a 
-            INNER JOIN banners b 
-            WHERE a.id=b.id_empresa 
-                AND b.banner!='' 
-                AND b.banner!='no_banner.jpg' 
-            GROUP BY a.id 
-            ORDER BY a.fecha_ingreso 
-            DESC LIMIT $cant";
-            $query = $this->db->query($sql);
-            return $query->result();
-        }
-
+     
        public function getFechaFormateada($fecha) {
             $aux = explode(" ", $fecha);
             $aux2 = substr($fecha, 0, 10);

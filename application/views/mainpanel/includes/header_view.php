@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Zona de Administración</title>
     <base href="<?php echo base_url(); ?>" />
+    
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Zona de Administración">
 	<meta name="author" content="Eduardo Rosadio">
@@ -59,7 +60,26 @@
     integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 </head>
 
-<body>
+<?php
+	if( isset($current_section) )
+	{
+		if( ($current_section=="contactanos") )
+		{
+			$onload = ' onload="initialize()"';
+		}
+		else
+		{
+			$onload = '';
+		}
+	}
+	else
+	{
+		$onload = '';
+	}
+?>
+<body<?php echo $onload; ?>>
+
+
 	<!-- topbar starts -->
 	<div class="navbar">
 		<div class="navbar-inner">

@@ -1,8 +1,9 @@
 <div>
-    <ul class="breadcrumb">
-        <li><a href="mainpanel/clientes/listado">Listado de Clientes</a> <span class="divider">/</span></li>
-        <li><a href="mainpanel/clientes/nuevo">Nuevo Cliente</a> <span class="divider">/</span></li>
-    </ul>
+   <ul class="breadcrumb">
+  <li><a href="mainpanel/clientes/editTexto/clientes">Editar Texto</a> <span class="divider">/</span></li>
+      <li><a href="mainpanel/clientes/listado">Listado de Clientes</a> <span class="divider">/</span></li>
+      <li><a href="mainpanel/clientes/nuevo">Nuevo Cliente</a> <span class="divider">/</span></li>
+   </ul>
 </div>
 <div class="row-fluid sortable">
     <div class="box span12">
@@ -47,7 +48,7 @@
                         <div class="control-group">
                             <div class="controls">
                                 <div class="alert alert-success span10">
-                                    <p><strong>La imagen a subir debe tener dimensiones de 360 x 220 pixeles. Caso contrario la imagen se forzará al tamaño indicado.</strong></p>
+                                    <p><strong>La imagen a subir debe tener dimensiones de 240 x 120 pixeles. Caso contrario la imagen se forzará al tamaño indicado.</strong></p>
                                 </div>
                             </div>
                         </div>

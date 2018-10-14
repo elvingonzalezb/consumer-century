@@ -1,9 +1,9 @@
 <div>
-    <ul class="breadcrumb">
-        <li><a href="mainpanel/servicios/listado">Listado de Servicios</a> <span class="divider">/</span></li>
-        <li><a href="mainpanel/servicios/nuevo">Nuevo Servicio</a> <span class="divider">/</span></li>
-       
-    </ul>
+  <ul class="breadcrumb">
+     <li><a href="mainpanel/servicios/editTexto/servicios">Editar Texto</a> <span class="divider">/</span></li>
+     <li><a href="mainpanel/servicios/listado">Listado de Servicios</a> <span class="divider">/</span></li>
+     <li><a href="mainpanel/servicios/nuevo">Nuevo Servicio</a> <span class="divider">/</span></li>
+</ul>
 </div>
 
 <div class="row-fluid sortable">
@@ -40,7 +40,6 @@
                         <th width="5%">Nro</th>
                         <th>Imagen</th>
                         <th width="20%">Título</th>
-                        <th width="40%">Descripción</th>
                         <th width="8%">Fecha Publicación</th>
                         <th width="5%">Estado</th>
                         <th width="32%">Acción</th>
@@ -64,7 +63,6 @@
                         echo '<td class="center">'.$orden.'</td>';
                         echo '<td class="miniatura">'.$pic.'</td>';
                         echo '<td>'.$seccion->titulo.'</td>';
-                        echo '<td>'.$seccion->fulltext.'</td>';
                         echo '<td>'.$seccion->created.'</td>';
                         if($seccion->state==1)
                         {

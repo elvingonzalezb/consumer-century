@@ -1,10 +1,9 @@
 <div>
     <ul class="breadcrumb">
-        <li><a href="mainpanel/articulos/categorias">Categorias</a> <span class="divider">/</span></li>
-        <li><a href="mainpanel/articulos/nuevacategoria">Nueva Categoria</a> <span class="divider">/</span></li>
-        <li><a href="mainpanel/articulos/listado">Listado de Articulos</a> <span class="divider">/</span></li>
-        <li><a href="mainpanel/articulos/nuevo">Nuevo Articulo</a> <span class="divider">/</span></li>
-    </ul>
+      <li><a href="mainpanel/articulos/editTexto/articulos">Editar Texto</a> <span class="divider">/</span></li>
+      <li><a href="mainpanel/articulos/listado">Listado de Artículos</a> <span class="divider">/</span></li>
+      <li><a href="mainpanel/articulos/nuevo">Nuevo Artículo</a> <span class="divider">/</span></li>
+   </ul>
 </div>
 <div class="row-fluid sortable">
     <div class="box span12">
@@ -33,20 +32,7 @@
                    $this->session->unset_userdata('error'); 
                    }     
             ?>
-                        <div class="control-group">
-                            <label class="control-label" for="typeahead">Categorías</label>
-                            <div class="controls">
-                                <select name="id_categoria">
-                                <option value="0">Elija la categoría...</option>
-                                <?php 
-                                foreach($categorias as $categoria)     
-                                {  
-                                echo '<option value="'.$categoria->id.'">'.$categoria->categoria.'</option>';
-                                }   
-                                ?>
-                            </select>
-                            </div>
-                        </div>
+                    
                         <div class="control-group">
                             <label class="control-label" for="typeahead">Título</label>
                             <div class="controls">
@@ -62,7 +48,7 @@
                         <div class="control-group">
                             <div class="controls">
                                 <div class="alert alert-success span10">
-                                    <p><strong>La imagen a subir debe tener dimensiones de 900 x 600 pixeles. Caso contrario la imagen se forzará al tamaño indicado.</strong></p>
+                                    <p><strong>La imagen a subir debe tener dimensiones de 370 x 275 pixeles. Caso contrario la imagen se forzará al tamaño indicado.</strong></p>
                                 </div>
                             </div>
                         </div>
